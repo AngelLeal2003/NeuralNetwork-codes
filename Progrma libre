@@ -1,0 +1,32 @@
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Datos
+años = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], dtype=float)
+ganancia_acumulada = np.array([700, 900, 1100, 1300, 1500, 1700, 1900, 2100, 2300, 2500, 2700, 2900, 3100, 3300, 3500], dtype=float)
+
+# Crear el modelo
+model = Sequential()
+model.add(Dense(units=1, input_shape=[1]))
+
+# Compilar el modelo
+model.compile(optimizer='sgd', loss='mean_squared_error')
+
+# Entrenar el modelo
+history = model.fit(años, ganancia_acumulada, epochs=2000, verbose=0)
+
+# Predecir la ganancia acumulada para el año 27
+año_a_predecir = 27
+prediccion = model.predict([año_a_predecir])
+
+print(f"La ganancia acumulada predicha para el año {año_a_predecir} es: {prediccion[0][0]}")
+
+# Graficar el historial de pérdida
+plt.plot(history.history['loss'])
+plt.xlabel('Épocas')
+plt.ylabel('Magnitud de la pérdida')
+plt.title('Historial de pérdida')
+plt.show()
