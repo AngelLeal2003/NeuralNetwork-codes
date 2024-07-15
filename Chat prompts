@@ -1,0 +1,66 @@
+-----------PROMPTS-------------
+
+-----Prompt de perceptrón libre
+Necesito crear una red neuronal para una predicción de inversión de dinero en una empresa
+- Debe ser un perceptrón
+- Debe ser codigo en python
+- Usa import tensorflow as tf & import numpy as np & import matplotlib.pyplot as plt, en el tensor flow usa keras
+- Usa una época como epchos = 2000
+- Para entrenar el modelo utiliza los siguientes datos
+Año = 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
+Ganacia acumulada = 700, 900, 1100, 1300, 1500, 1700, 1900, 2100, 2300, 2500, 2700, 2900, 3100, 3300, 3500.
+- Calcula cuanto será la ganacia acumulada en  27
+- grafica el historial con epochs en x label y loss magnitude en y
+
+
+-----Prompt de código de las flores
+Utiliza un perceptrón simple para clasificar los datos del conjunto de datos Iris en Python. Necesito usar TensorFlow para implementar el modelo.
+- importa las siguientes librerías: TensorFlow con Keras, NumPy para manipulación de datos y Matplotlib para visualización
+- Los datos de entrenamiento se cargarán desde el siguiente URL: 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'. Utiliza las primeras 100 filas y convierte la columna de clases (Iris-setosa e Iris-versicolor) a valores binarios (0 y 1). Convierte los datos en una matriz de tipo float64." 
+- Después de cargar los datos, quiero visualizar un gráfico de dispersión con las longitudes del sépalo en el eje X y las longitudes del pétalo en el eje Y. 
+- Escribe una función perceptron que tome los datos cargados y un número específico de iteraciones (num_iter) como entrada. Implementa el algoritmo del perceptrón para clasificación binaria.
+- Entrena el modelo utilizando la función perceptron con 10 iteraciones.
+- Grafica cómo cambia el número de clasificaciones incorrectas a lo largo de las iteraciones del perceptrón. Utiliza el número de épocas en el eje X y la cantidad de clasificaciones incorrectas en el eje Y.
+
+-----Prompt de código de deuda debt
+Necesito una red neuronal de predicción de credit.policy en relación con installments.
+- Debe ser un perceptrón
+-Debe ser código en python
+- Usa import tensorflow as tf & import numpy as np & import matplotlib.pyplot as plt, en el tensor flow usa keras
+- Usa una época como epchos = 2000
+- Para entrenar el modelo quiero que tomes los datos de A2 a A361 como credit.policy y de B2 a B361 como installment de este archivo:
+https://docs.google.com/spreadsheets/d/1XYjua1Nt0eiU8R6RaogDhNXs6o_fPR-m/edit?usp=sharing&ouid=107037475767035956101&rtpof=true&sd=true
+Y elimines los outliers
+- Calcula una predicción de 370
+- grafica el historial con epochs en x label y loss magnitude en y
+
+-----Prompt de código de clasificador de deuda debt
+necesito una red neuronal para un clasificador binario
+- Debe ser un perceptrón
+-Debe ser código en python
+- Usa import tensorflow as tf & import numpy as np & import matplotlib.pyplot as plt, en el tensor flow usa keras
+- Usa una época como epchos = 2000
+Para entrenar la inteligencia usa los siguientes datos:
+credit_policy = np.arange(1, 361)
+fully_paid = np.array([
+    0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1,
+    0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,
+    0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+    1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1,
+    0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0,
+    0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1,
+    0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1
+])
+- Calcula una predicción de 370
+- grafica el historial con epochs en x label y loss magnitude en y
